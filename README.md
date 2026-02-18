@@ -1,16 +1,183 @@
-# React + Vite
+# 🏨 Hostel Complaint Management System (Frontend - UI Team)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is the **Frontend UI** of a Role-Based Hostel Complaint Management System developed using **ReactJS**.
+It allows students to submit complaints digitally and administrators to monitor and update complaint status efficiently.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 👥 Team Responsibility
 
-## React Compiler
+This repository contains only the **Frontend Layer (Presentation Layer)**.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Backend (Spring Boot) and Database (PostgreSQL) are handled by separate teams.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🚀 Tech Stack
+
+* ReactJS (Vite)
+* React Router DOM
+* Axios
+* CSS (Custom Styling)
+
+---
+
+## 📂 Project Structure
+
+```
+src/
+ ├── api/                # API configuration & service layer
+ ├── components/         # Reusable UI components
+ ├── layouts/            # Main layout wrapper
+ ├── pages/              # Application pages
+ ├── routes/             # Routing configuration
+ ├── styles/             # Global styling
+ ├── App.jsx
+ └── main.jsx
+```
+
+---
+
+## 🧩 Implemented Pages
+
+### 1️⃣ Dashboard
+
+* Complaint statistics summary
+* Recent complaints table
+* Quick navigation buttons
+
+### 2️⃣ Create Complaint
+
+* Complaint submission form
+* Validation handling
+* File upload support
+
+### 3️⃣ Complaint List
+
+* View all complaints
+* Filter by status & category
+* Pagination support
+
+### 4️⃣ Complaint Details
+
+* View full complaint information
+* Download attachment
+* Update complaint status
+
+### 5️⃣ Users (Optional)
+
+* Basic user listing UI
+
+---
+
+## 🔗 Expected Backend Base URL
+
+```
+http://localhost:8080/api
+```
+
+---
+
+## 📦 API Contract
+
+### Complaint Object
+
+```json
+{
+  "id": 1,
+  "title": "Broken Chair",
+  "description": "Chair leg damaged",
+  "category": "CARPENTRY",
+  "status": "OPEN",
+  "createdDate": "2026-02-01",
+  "assignedTo": "Ram",
+  "attachmentUrl": "http://localhost:8080/files/1.jpg"
+}
+```
+
+---
+
+### Dashboard Stats
+
+```json
+{
+  "total": 25,
+  "open": 10,
+  "inProgress": 8,
+  "resolved": 7
+}
+```
+
+---
+
+### Create Complaint (multipart/form-data)
+
+Fields:
+
+```
+title
+description
+category
+userId
+file
+```
+
+---
+
+### Update Complaint Status
+
+```
+PUT /api/complaints/{id}/status
+Body:
+{
+  "status": "RESOLVED"
+}
+```
+
+---
+
+## ⚙️ Setup Instructions
+
+### 1. Install dependencies
+
+```
+npm install
+```
+
+### 2. Run project
+
+```
+npm run dev
+```
+
+### 3. Open in browser
+
+```
+http://localhost:5173
+```
+
+---
+
+## 🧪 Notes for Backend Team
+
+* Follow the provided API contract strictly
+* Response fields must match naming exactly
+* Dates should be ISO format
+* File URL must be accessible publicly
+
+---
+
+## 📌 Features Covered
+
+✔ Role-based UI structure
+✔ Complaint submission UI
+✔ Status tracking UI
+✔ File upload support UI
+✔ Dashboard analytics UI
+✔ Responsive layout
+
+---
+
+## 📄 Author
+
+Frontend UI Team – Hostel Complaint Management System
