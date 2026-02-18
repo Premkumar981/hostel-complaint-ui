@@ -1,0 +1,39 @@
+.filters {
+    margin: 20px 0;
+    display: flex;
+    gap: 15px;
+  }
+  
+  .filters select {
+    padding: 8px;
+    background: #1e293b;
+    color: white;
+    border: none;
+    border-radius: 6px;
+  }
+  
+  .pagination {
+    margin-top: 20px;
+    display: flex;
+    gap: 8px;
+  }
+  
+  .pagination button {
+    padding: 6px 12px;
+    background: #1e293b;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .pagination button.active {
+    background: #38bdf8;
+    color: black;
+  }
+  
+  .pagination button:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+  

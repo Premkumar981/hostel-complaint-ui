@@ -1,0 +1,23 @@
+.summary-card {
+    background: #1e293b;
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: 0.2s;
+  }
+  
+  .summary-card:hover {
+    transform: translateY(-4px);
+  }
+  
+  .summary-card h4 {
+    color: #94a3b8;
+    margin-bottom: 10px;
+  }
+  
+  .summary-card h2 {
+    color: white;
+    font-size: 28px;
+  }
+  

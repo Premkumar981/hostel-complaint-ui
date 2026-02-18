@@ -1,0 +1,38 @@
+.table-wrapper {
+    margin-top: 30px;
+    background: #1e293b;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .complaint-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .complaint-table th,
+  .complaint-table td {
+    padding: 12px;
+    text-align: left;
+  }
+  
+  .complaint-table th {
+    color: #94a3b8;
+    border-bottom: 1px solid #334155;
+  }
+  
+  .complaint-table tr:hover {
+    background: #0f172a;
+  }
+  
+  /* Status colors */
+  .status.open { color: #facc15; }
+  .status.in_progress { color: #fb923c; }
+  .status.resolved { color: #22c55e; }
+  
+  .view-btn {
+    text-decoration: none;
+    color: #38bdf8;
+    font-weight: bold;
+  }
+  

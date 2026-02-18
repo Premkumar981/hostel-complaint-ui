@@ -1,0 +1,46 @@
+.form-container {
+    max-width: 600px;
+  }
+  
+  .complaint-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .complaint-form input,
+  .complaint-form textarea,
+  .complaint-form select {
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+    background: #1e293b;
+    color: white;
+  }
+  
+  .complaint-form textarea {
+    min-height: 100px;
+  }
+  
+  .submit-btn {
+    margin-top: 15px;
+    padding: 12px;
+    background: #22c55e;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .error {
+    color: #f87171;
+    font-size: 13px;
+  }
+
+  .file-preview {
+    font-size: 13px;
+    color: #38bdf8;
+    margin-top: -5px;
+  }
+  
